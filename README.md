@@ -4,7 +4,7 @@
 
 This project develops an interactive **Power BI dashboard** for analysing hotel booking performance, cancellation behaviour and revenue generation.
 
-The analysis uses historical hotel booking data covering **City Hotel and Resort Hotel**. The project follows an end-to-end data analytics workflow including data cleaning, transformation, calculated columns, DAX measures and interactive dashboard development.
+The project uses historical hotel booking data covering **City Hotel and Resort Hotel**. The workflow includes data cleaning, transformation, calculated columns, DAX measures and interactive dashboard development.
 
 The final dashboard consists of two pages:
 
@@ -17,19 +17,9 @@ The final dashboard consists of two pages:
 
 Hotel booking data contains valuable information about booking volumes, cancellations, revenue, lead time, deposit types, market segments and hotel performance.
 
-However, analysing these variables through raw data or static reports can make it difficult to identify important patterns and compare hotel performance.
+However, analysing these variables using raw data or static reports can make it difficult to identify important patterns and compare hotel performance.
 
-This project aims to provide an interactive business intelligence solution that helps analyse:
-
-- Booking performance
-- Cancellation behaviour
-- Revenue generation
-- Average Daily Rate (ADR)
-- Hotel-level performance
-- Lead-time cancellation patterns
-- Deposit-type cancellation patterns
-- Market-segment performance
-- Monthly booking trends
+This project aims to provide an interactive business intelligence solution for analysing booking performance, cancellation behaviour and revenue generation.
 
 ---
 
@@ -70,9 +60,73 @@ The dataset includes information related to:
 
 ---
 
+## 📖 Key Metric Definitions
+
+### Total Bookings
+
+The total number of valid booking records in the cleaned dataset.
+
+**Total Bookings = 87,229**
+
+### Cancelled Bookings
+
+Bookings where `is_canceled = 1`.
+
+These are reservations that were cancelled.
+
+**Cancelled Bookings ≈ 24,009**
+
+### Completed Bookings
+
+Bookings where `is_canceled = 0`.
+
+These are reservations that were not cancelled.
+
+**Completed Bookings ≈ 63,220**
+
+### Cancellation Rate
+
+The percentage of total bookings that were cancelled.
+
+**Cancellation Rate = Cancelled Bookings / Total Bookings × 100**
+
+Overall cancellation rate is approximately:
+
+**27.52%**
+
+### ADR — Average Daily Rate
+
+ADR represents the average daily room rate associated with the bookings.
+
+### Realized Revenue
+
+Revenue associated with **non-cancelled bookings** in this project.
+
+### Average Stay
+
+The average number of nights per booking.
+
+### Lead Time
+
+The number of days between the booking date and the guest's arrival date.
+
+### Market Segment
+
+The category or source through which a booking was made, such as Online Travel Agent, Direct, Groups, Corporate, etc.
+
+### Deposit Type
+
+The deposit arrangement associated with a booking, such as:
+
+- No Deposit
+- Non Refund
+- Refundable
+
+---
+
 ## 🧹 Data Cleaning & Transformation
 
-The raw dataset was prepared before dashboard development.
+The raw dataset was cleaned and transformed before dashboard development.
 
 The cleaning process included:
 
